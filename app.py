@@ -146,7 +146,7 @@ def index():
          """
         cgpa_i_sampled_res = cgpa_i_sampled(knwn_cgpa)
         print(cgpa_i_sampled_res)
-        return render_template("index.html")
+        return render_template("results.html")
     else:
         return render_template("index.html")
     
