@@ -1,186 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="zCXUCodfLlP1CXtSO5cLL43FflpPPTMq2HmS5WBBss0" />
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
-    <link rel="manifest" href="static/site.webmanifest">
-    <script data-ad-client="ca-pub-9918130986934407" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <title>GPredictAble!</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="zCXUCodfLlP1CXtSO5cLL43FflpPPTMq2HmS5WBBss0" />
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+    integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+  <link rel="manifest" href="static/site.webmanifest">
+  <script data-ad-client="ca-pub-9918130986934407" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <title>GPredictAble!</title>
 </head>
+<style>
+	.nav {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  }
+</style>
 
-<body class ="bg-gray-200">
-  <section class="text-gray-600 body-font">
-    <div class="container flex md:flex-row flex-col items-center">
-      <div class="lg:w-full">
-        <form class="sm:w-full " method="POST" action="/" >
-  <div class="flex items-center mt-20 h-auto p-5">
-    <div class="container">
-  
-      <div class="flex justify-center">
-        <div class="shadow-2xl sm:rounded-md sm:overflow-hidden bg-white shadow-2xl rounded-lg w-2/5">
-          <ul class="divide-y divide-gray-200">
-            <li class="p-4 hover:bg-gray-50 cursor-edit">
-              <div class="md:flex md:items-center">
-                <div class="md:w-1/3">
-                  <label for="sem1" class="block text-gray-700 font-medium md:text-center md:mb-0">
-                    Semester1:
-                  </label>
-                </div>
-                <div class="md:w-2/3">
-                  <input value=0 placeholder = "Enter the values for sem1" type="text" id="sem1" name="sem1" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
-                </div>
-              </div>
-            </li>
-            <li class="p-4 hover:bg-gray-50 cursor-edit">
-              <div class="md:flex md:items-center">
-                <div class="md:w-1/3">
-                  <label for="sem1" class="block text-gray-700 font-medium md:text-center md:mb-0">
-                    Semester1:
-                  </label>
-                </div>
-                <div class="md:w-2/3">
-                  <input value=0 placeholder = "Enter the values for sem1" type="text" id="sem1" name="sem1" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
-                </div>
-              </div>
-            </li>
-            
-          </ul>
-        </div>
+<body class="bg-gray-200 ">
+  <header class="sticky bg-opacity-40  backdrop-filter backdrop-blur-lg top-0 z-10 text-white  border-b border-gray-200 bg-gray-400 body-font">
+    <div class=" mx-auto container mx-auto flex flex-wrap  flex-col md:flex-row items-center">
+      <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+        <a class="mr-5 text-gray-600 hover:text-gray-900">How it works?</a>
+        <a class="mr-5 text-gray-600 hover:text-gray-900">LRC</a>
+        <a class="mr-5 text-gray-600 hover:text-gray-900">Developers</a>
+        <a class="text-gray-600 hover:text-gray-900">Feedback</a>
+      </nav>
+      <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="gray" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-gray-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 font-bold title-font tracking-wider text-center text-sm text-gray-700 text-xl font-medium title-font tracking-wider text-center text-sm" style = "font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:24px;">GPredictAble!</span>
+      </a>
+      <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
       </div>
     </div>
-  </div>
-  <div class="flex items-center h-auto p-5">
-    <div class="container">
-  
-      <div class="flex justify-center">
-        <div class="shadow-2xl sm:rounded-md sm:overflow-hidden bg-white shadow-2xl rounded-lg w-2/5">
-          <ul class="divide-y divide-gray-200">
-            <li class="p-4 hover:bg-gray-50 cursor-edit">
-              <div class="md:flex md:items-center">
-                <div class="md:w-1/3">
-                  <label for="sem1" class="block text-gray-700 font-medium md:text-center md:mb-0">
-                    Semester1:
-                  </label>
-                </div>
-                <div class="md:w-2/3">
-                  <input value=0 placeholder = "Enter the values for sem1" type="text" id="sem1" name="sem1" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
-                </div>
-              </div>
-            </li>
-            <li class="p-4 hover:bg-gray-50 cursor-edit">
-              <div class="md:flex md:items-center">
-                <div class="md:w-1/3">
-                  <label for="sem1" class="block text-gray-700 font-medium md:text-center md:mb-0">
-                    Semester1:
-                  </label>
-                </div>
-                <div class="md:w-2/3">
-                  <input value=0 placeholder = "Enter the values for sem1" type="text" id="sem1" name="sem1" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
-                </div>
-              </div>
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="flex items-center h-auto p-5">
-    <div class="container">
-  
-      <div class="flex justify-center">
-        <div class="shadow-2xl sm:rounded-md sm:overflow-hidden bg-white shadow-2xl rounded-lg w-2/5">
-          <ul class="divide-y divide-gray-200">
-            <li class="p-4 hover:bg-gray-50 cursor-edit">
-              <div class="md:flex md:items-center">
-                <div class="md:w-1/3">
-                  <label for="sem1" class="block text-gray-700 font-medium md:text-center md:mb-0">
-                    Semester1:
-                  </label>
-                </div>
-                <div class="md:w-2/3">
-                  <input value=0 placeholder = "Enter the values for sem1" type="text" id="sem1" name="sem1" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
-                </div>
-              </div>
-            </li>
-            <li class="p-4 hover:bg-gray-50 cursor-edit">
-              <div class="md:flex md:items-center">
-                <div class="md:w-1/3">
-                  <label for="sem1" class="block text-gray-700 font-medium md:text-center md:mb-0">
-                    Semester1:
-                  </label>
-                </div>
-                <div class="md:w-2/3">
-                  <input value=0 placeholder = "Enter the values for sem1" type="text" id="sem1" name="sem1" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
-                </div>
-              </div>
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="flex items-center h-auto p-5">
-    <div class="container">
-  
-      <div class="flex justify-center">
-        <div class="shadow-2xl sm:rounded-md sm:overflow-hidden bg-white shadow-2xl rounded-lg w-2/5">
-          <ul class="divide-y divide-gray-200">
-            <li class="p-4 hover:bg-gray-50 cursor-edit">
-              <div class="md:flex md:items-center">
-                <div class="md:w-1/3">
-                  <label for="sem1" class="block text-gray-700 font-medium md:text-center md:mb-0">
-                    Semester1:
-                  </label>
-                </div>
-                <div class="md:w-2/3">
-                  <input value=0 placeholder = "Enter the values for sem1" type="text" id="sem1" name="sem1" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
-                </div>
-              </div>
-            </li>
-            <li class="p-4 hover:bg-gray-50 cursor-edit">
-              <div class="md:flex md:items-center">
-                <div class="md:w-1/3">
-                  <label for="sem1" class="block text-gray-700 font-medium md:text-center md:mb-0">
-                    Semester1:
-                  </label>
-                </div>
-                <div class="md:w-2/3">
-                  <input value=0 placeholder = "Enter the values for sem1" type="text" id="sem1" name="sem1" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
-                </div>
-              </div>
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+  </header>
 
-      </div>
-      <div class="flex flex-col">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          Predict!
-        </button>
-        
-      </div>
-      <div class="lg:flex-grow -ml-20 md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Knausgaard typewriter readymade marfa</h1>
-        <p class="mb-8 leading-relaxed">Chillwave portland ugh, knausgaard fam polaroid iPhone. Man braid swag typewriter affogato, hella selvage wolf narwhal dreamcatcher.</p>
-        <p class="text-sm mt-2 text-gray-500 mb-8 w-full">Neutra shabby chic ramps, viral fixie.</p>
-        
+  <div class ="mt-20">
+    <div class="">
+      <div class="max-w-7xl mx-auto grid grid-cols-12 bg-gray-200">
+        <div class="col-span-3">
+          <!-- *col1 -->
+          <form class="sm:w-full " method="POST" action="/">
+            <div class="flex items-center h-auto p-5">
+              <div class="container">
+
+                <div class="flex justify-center ">
+                  <div class="shadow-2xl sm:rounded-md sm:overflow-hidden bg-white shadow-2xl rounded-lg">
+                    <h2 class="text-gray-900 mt-1 font-medium title-font tracking-wider text-center text-sm">I Year</h2>
+                    <ul class="divide-y divide-gray-200">
+                      <li class="p-4 hover:bg-gray-50 cursor-edit">
+                        <div class="md:flex md:items-center">
+                          <div class="md:w-1/3">
+                
+                            <label for="sem1" class="block text-gray-700 font-medium md:text-center md:mb-0">
+                              Semester1:
+                            </label>
+                          </div>
+                          <div class="md:w-2/3">
+                            <input value=0 placeholder="Enter the values for sem1" type="text" id="sem1" name="sem1"
+                              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
+                          </div>
+                        </div>
+                      </li>
+                      <li class="p-4 hover:bg-gray-50 cursor-edit">
+                        <div class="md:flex md:items-center">
+                          <div class="md:w-1/3">
+                            <label for="sem2" class="block text-gray-700 font-medium md:text-center md:mb-0">
+                              Semester2:
+                            </label>
+                          </div>
+                          <div class="md:w-2/3">
+                            <input value=0 placeholder="Enter the values for sem2" type="text" id="sem2" name="sem2"
+                              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- *item 1 end -->
+        </div>
+        <div class="col-span-3 sm:w-full">
+          <!-- *col2 -->
+          <div class="flex items-center h-auto p-5">
+            <div class="container">
+
+              <div class="flex justify-center">
+                <div class="shadow-2xl sm:rounded-md sm:overflow-hidden bg-white shadow-2xl rounded-lg">
+                  <h2 class="text-gray-900 mt-1 font-medium title-font tracking-wider text-center text-sm">II Year</h2>
+                  <ul class="divide-y divide-gray-200">
+                    <li class="p-4 hover:bg-gray-50 cursor-edit">
+                      <div class="md:flex md:items-center">
+                        <div class="md:w-1/3">
+                          <label for="sem3" class="block text-gray-700 font-medium md:text-center md:mb-0">
+                            Semester3:
+                          </label>
+                        </div>
+                        <div class="md:w-2/3">
+                          <input value=0 placeholder="Enter the values for sem3" type="text" id="sem3" name="sem3"
+                            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="p-4 hover:bg-gray-50 cursor-edit">
+                      <div class="md:flex md:items-center">
+                        <div class="md:w-1/3">
+                          <label for="sem4" class="block text-gray-700 font-medium md:text-center md:mb-0">
+                            Semester4:
+                          </label>
+                        </div>
+                        <div class="md:w-2/3">
+                          <input value=0 placeholder="Enter the values for sem4" type="text" id="sem4" name="sem4"
+                            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- *item 1 end -->
+        </div>
+        <div class="col-span-3 sm:w-full">
+          <!-- *item 2 end -->
+          <div class="flex items-center h-auto p-5">
+            <div class="container">
+
+              <div class="flex justify-center">
+                <div class="shadow-2xl sm:rounded-md sm:overflow-hidden bg-white shadow-2xl rounded-lg">
+                  <h2 class="text-gray-900 mt-1 font-medium title-font tracking-wider text-center text-sm">III Year</h2>
+                  <ul class="divide-y divide-gray-200">
+                    <li class="p-4 hover:bg-gray-50 cursor-edit">
+                      <div class="md:flex md:items-center">
+                        <div class="md:w-1/3">
+                          <label for="sem5" class="block text-gray-700 font-medium md:text-center md:mb-0">
+                            Semester5:
+                          </label>
+                        </div>
+                        <div class="md:w-2/3">
+                          <input value=0 placeholder="Enter the values for sem5" type="text" id="sem5" name="sem5"
+                            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="p-4 hover:bg-gray-50 cursor-edit">
+                      <div class="md:flex md:items-center">
+                        <div class="md:w-1/3">
+                          <label for="sem6" class="block text-gray-700 font-medium md:text-center md:mb-0">
+                            Semester6:
+                          </label>
+                        </div>
+                        <div class="md:w-2/3">
+                          <input value=0 placeholder="Enter the values for sem6" type="text" id="sem6" name="sem6"
+                            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- *item 1 end -->
+        </div>
+        <div class="col-span-3 sm:w-full ">
+          <!-- *item 2 end -->
+
+          <div class="flex items-center h-auto p-5">
+            <div class="container">
+
+              <div class="flex justify-center">
+                <div class="shadow-2xl sm:rounded-md sm:overflow-hidden bg-white shadow-2xl rounded-lg">
+                  <h2 class="text-gray-900 mt-1 font-medium title-font tracking-wider text-center text-sm">IV Year</h2>
+                  <ul class="divide-y divide-gray-200">
+                    <li class="p-4 hover:bg-gray-50 cursor-edit">
+                      <div class="md:flex md:items-center">
+                        <div class="md:w-1/3">
+                          <label for="sem7" class="block text-gray-700 font-medium md:text-center md:mb-0">
+                            Semester7:
+                          </label>
+                        </div>
+                        <div class="md:w-2/3">
+                          <input value=0 placeholder="Enter the values for sem7" type="text" id="sem7" name="sem7"
+                            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="p-4 hover:bg-gray-50 cursor-edit">
+                      <div class="md:flex md:items-center">
+                        <div class="md:w-1/3">
+                          <label for="sem8" class="block text-gray-700 font-medium md:text-center md:mb-0">
+                            Semester8:
+                          </label>
+                        </div>
+                        <div class="md:w-2/3">
+                          <input value=0 placeholder="Enter the values for sem8" type="text" id="sem8" name="sem8"
+                            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200">
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- *item 1 end -->
+        </div>
       </div>
     </div>
-  </section>   
-</form>    
+  </div>
+  <!-- ?row 1 end -->
+  <section class="text-gray-600 body-font relative ">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <div class="flex flex-wrap -m-2">
+          <div class="p-2 w-full">
+            <button type="submit"
+              class="flex mx-auto bg-transparent hover:bg-gray-500 text-gray-700 font-semibold hover:text-white py-2 px-5 border border-gray-500 hover:border-transparent rounded">Button</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </form>
+  </div>
 </body>
+
 </html>
