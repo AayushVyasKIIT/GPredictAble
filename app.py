@@ -108,11 +108,12 @@ def handle_zeros(CGPA):
            return (knwn_cgpa[:i-1])
         knwn_cgpa.append(CGPA[i-1])
 def sem_i_sampled(knwn_cgpa):
-    knwn_sems = np.arange(1,len(knwn_cgpa)+1)
-    sem_i_sampled = np.array(knwn_sems)
-    for i in range(len(knwn_cgpa)):
-        sem_i_sampled = np.append(sem_i_sampled,knwn_sems);
+    # knwn_sems = np.arange(1,len(knwn_cgpa)+1)
+    sem_i_sampled = []
 
+    for i in range(1,len(knwn_cgpa)+1):
+        sem_i_sampled.append(i)
+    sem_i_sampled = np.array(sem_i_sampled,np.int32)
     return sem_i_sampled
 
 
@@ -125,7 +126,7 @@ def cgpa_i_sampled(knwn_cgpa):
 """ 
 !landing page
  """
-@app.route('/',methods=[ 'POST','GET'])
+@app.route('/',methods=['GET','POST'])
 def index():
     if request.method == 'POST':
         sems = ["sem1","sem2","sem3","sem4","sem5","sem6","sem7",]
@@ -135,30 +136,63 @@ def index():
             !assertionError(int(request.form[str(sem)])>10)
              """
             CGPA.append(request.form[str(sem)])
+        
         CGPA = np.array(CGPA,np.float32)
+
         knwn_cgpa = handle_zeros(CGPA)
-        sem_i_sampled_res = sem_i_sampled(knwn_cgpa)
-        print("Debug:{}".format(sem_i_sampled_res))
+        unknwn_cgpa = np.array([],np.float32)
+        
+        sem_knwn = [x for x in range(1,len(knwn_cgpa)+1)]
+        sem_unknwn =[x for x in range(len(sem_knwn)+1,9)]
+       
         """ 
         !if knwn_cgpa == [] or knwn_cgpa == -1 
         !                           or knwn_cgpa >10:
             !throw error(assertion errors)
          """
+
+
+        """
+            *i times sampled knwn cgpa's 
+        """
         cgpa_i_sampled_res = cgpa_i_sampled(knwn_cgpa)
-        print(cgpa_i_sampled_res)
+        sem_i_sampled_res = sem_i_sampled(cgpa_i_sampled_res) 
+        """ 
+        *use linear regression
+         """
+        least_square,bfl,yp = linear_regression(sem_i_sampled_res,cgpa_i_sampled_res)
+        
+        """ 
+        *predict for last j sems
+         """
+        predictions = []
+        for sem in sem_unknwn:
+            predictions.append(predict_4x(sem,bfl))
+        print(sem_i_sampled_res)
+        print(predictions)
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         return render_template("results.html")
     else:
         return render_template("index.html")
-    
 
-
-
-
-
-
-
-
-
+@app.route('/feedback')
+def feedback():
+    return render_template("feedback.html")
 
 
 

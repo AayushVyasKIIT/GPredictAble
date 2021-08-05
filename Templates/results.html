@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="zCXUCodfLlP1CXtSO5cLL43FflpPPTMq2HmS5WBBss0" />
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+    integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+  <link rel="manifest" href="static/site.webmanifest">
+  <script data-ad-client="ca-pub-9918130986934407" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <title>GPredictAble!</title>
+</head>
+<style>
+  .nav {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  #loader {
+    border: 2px solid #d1d1d1;
+    /* Light grey */
+    border-top: 2px solid #202325;
+    /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 3s linear infinite;
+    display: none;
+    transition: all 2s;
+  }
+
+  button {
+    transition: all 0.5s;
+
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #nameError {
+    display: none;
+    font-size: 0.8em;
+  }
+
+  #nameError.visible {
+    display: block;
+  }
+
+  input.invalid {
+    border-color: red;
+  }
+</style>
+
+<body class="bg-gray-200 ">
+  <header
+    class="sticky bg-opacity-40  backdrop-filter backdrop-blur-lg top-0 z-10 text-white  border-b border-gray-200 bg-gray-400 body-font">
+    <div class=" mx-auto container mx-auto flex flex-wrap  flex-col md:flex-row items-center">
+      <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+        <a onClick="smoothScroll(document.getElementById('tutorial'))" class="mr-5 text-gray-600 hover:text-gray-900">How it works?</a>
+        <a class="mr-5 text-gray-600 hover:text-gray-900">LRC</a>
+        <a href="/" class="mr-5 text-gray-600 hover:text-gray-900">Developers</a>
+        <a class="text-gray-600 hover:text-gray-900">Feedback</a>
+      </nav>
+      <a
+        class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="gray" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-gray-500 rounded-full"
+          viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span
+          class="ml-3 font-bold title-font tracking-wider text-center text-sm text-gray-700 text-xl font-medium title-font tracking-wider text-center text-sm"
+          style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:24px;">GPredictAble!</span>
+      </a>
+      <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+      </div>
+    </div>
+  </header>
+  <!-- *Main body starts -->
+
+
+    {{knwn_cgpa}}
+
+
+
+
+
+
+
+
+
+
+
+  <!-- *Main body ends -->
+
+  <footer>
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <span class="ml-3 text-xl"><img src="/static/favicon-32x32.png" ></span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 GPredictAble! —
+        <a href="https://twitter.com/inaayushV" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@inaayushV</a>
+      </p>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">Github —
+        <a href="https://github.com/AayushVyasKIIT/<repository_here>" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">https://github.com/AayushVyasKIIT/repository_here</a>
+      </p>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        <a href="https://twitter.com/inaayushV" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Made with <3 in India</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a href="https://facebook.com/aayush.vyas.7330" class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a href="https://twitter.com/inaayushV" class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/aayush-vyas-29407b1b8/"class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+</body>
+
+</html>
